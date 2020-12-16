@@ -1,0 +1,52 @@
+{
+    "name": "slashworks/contao-alertbox-bundle",
+    "type": "contao-bundle",
+    "description": "Show custom alertboxes on defined pages in Contao 4.",
+    "homepage": "https://www.borowiakziehe.de/",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Stefan Gruna",
+            "homepage": "https://github.com/sgruna"
+        }
+    ],
+    "require": {
+        "php": "^7.2 || ^8.0",
+        "contao/core-bundle": "^4.9",
+        "symfony/config": "^4.4 || ^5.1",
+        "symfony/dependency-injection": "^4.4 || ^5.1",
+        "symfony/http-kernel": "^4.4 || ^5.1",
+        "codefog/contao-haste": "^4.24"
+    },
+    "conflict": {
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0",
+        "contao/easy-coding-standard": "^2.0",
+        "phpunit/phpunit": "^8.4",
+        "symfony/phpunit-bridge": "^4.4 || ^5.1"
+    },
+    "extra": {
+        "contao-manager-plugin": "Slashworks\\ContaoAlertboxBundle\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Slashworks\\ContaoAlertboxBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Slashworks\\ContaoAlertboxBundle\\Tests\\": "tests/"
+        }
+    },
+    "support": {
+        "issues": "https://github.com/slashworks/contao-alertbox-bundle/issues",
+        "source": "https://github.com/slashworks/contao-alertbox-bundle"
+    },
+    "scripts": {
+        "cs-fixer": [
+            "vendor/bin/ecs check src/ tests/ --fix --ansi"
+        ]
+    }
+}

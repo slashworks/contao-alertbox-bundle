@@ -1,0 +1,24 @@
+
+<?php
+$GLOBALS['TL_HEAD'][] = '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">';
+$GLOBALS['TL_CSS'][] = 'bundles/slashworksalertbox/css/example.css';
+?>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script>
+  !(function() {
+    var title = '<?php echo $this->headline; ?>';
+    var text = '<?php echo $this->text; ?>';
+
+    <?php if ($this->href): ?>
+      var link = '<a href="<?php echo $this->href; ?>" class="hyperlink_txt" title="<?php echo $this->linkTitle; ?>"<?php echo $this->attribute; ?><?php echo $this->target; ?><?php echo $this->rel; ?>><?php echo $this->link; ?></a>';
+      text = text + link;
+    <?php endif; ?>
+
+    toastr.options.timeOut = 0;
+    toastr.options.extendedTimeout = 0;
+    toastr.options.closeButton = true;
+
+    toastr.info(text, title);
+  })();
+</script>

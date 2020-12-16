@@ -1,0 +1,26 @@
+
+<!-- indexer::stop -->
+<div class="<?= $this->class ?> <?php echo $this->type; ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+
+    <?php $this->block('headline'); ?>
+        <?php if ($this->headline): ?>
+            <<?= $this->hl ?> class="headline"><?= $this->headline ?></<?= $this->hl ?>>
+        <?php endif; ?>
+    <?php $this->endblock(); ?>
+
+    <?php $this->block('content'); ?>
+        <?php echo $this->text; ?>
+    <?php $this->endblock(); ?>
+
+    <?php $this->block('link'); ?>
+        <?php if ($this->href): ?>
+            <div class="link-container">
+                <a href="<?= $this->href ?>" class="hyperlink_txt" title="<?= $this->linkTitle ?>"<?= $this->attribute ?><?= $this->target ?><?= $this->rel ?>>
+                    <?= $this->link ?>
+                </a>
+            </div>
+        <?php endif; ?>
+    <?php $this->endblock(); ?>
+
+</div>
+<!-- indexer::continue -->

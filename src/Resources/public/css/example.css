@@ -1,0 +1,29 @@
+
+.mod_sw_alertbox {
+    background: #ddd;
+    box-sizing: border-box;
+    padding: 32px;
+    text-align: center;
+}
+
+.mod_sw_alertbox .wrap {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+.mod_sw_alertbox .wrap > *:first-child {
+    margin-top: 0;
+}
+
+.mod_sw_alertbox .wrap > *:last-child {
+    margin-bottom: 0;
+}
+
+.mod_sw_alertbox .hyperlink_txt {
+    background: #666;
+    color: #fafafa;
+    display: inline-block;
+    padding: .5em 1em;
+    text-decoration: none;
+}
